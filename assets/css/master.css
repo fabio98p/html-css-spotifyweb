@@ -1,6 +1,8 @@
 body{
 	margin: 0;
 	padding: 0;
+}
+*{
 	box-sizing: border-box;
 }
 /* UTILITY */
@@ -33,6 +35,14 @@ width: 8px;
 /* button */
 
 /* button */
+/* bold */
+.bold{
+	font-weight: bold;
+}
+.bolder{
+	font-weight: bolder;
+}
+/* bold */
 /* color */
 .color-grey{
 	color: #A2A2A2;
@@ -60,31 +70,33 @@ width: 8px;
 /* ASIDE */
 /* layout */
 aside{
-	color: white;
 	float: left;
+	color: white;
 	background-color: #000000;
 	height: calc(100vh - 100px);
 	width: 50px;
-	overflow-y: auto;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	overflow-y: hidden;
+}
+aside .xs {
+	text-align: center;
 }
 aside .lg{
 	display: none;
 }
 /* layout */
-
-/* logo */
-aside{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-
-}
-aside .xs {
-	text-align: center;
-}
-aside .xs i{
+/* top part */
+aside .top-part i{
 	font-size: 35px;
+}
+/* top part */
+/* logo */
+aside .logo {
+	margin: 20px 0;
 }
 aside .selection{
 	list-style-type: none;
@@ -92,21 +104,116 @@ aside .selection{
 }
 /* logo */
 /* selection */
-
+aside .selection li{
+	margin-bottom: 10px;
+}
 /* selection */
-/* playlist */
-
-/* playlist */
+/* instal */
+aside .instal{
+	margin-bottom: 30px;	
+}
+aside .bottom-part .my-instal{
+	font-size: 10px;
+	padding: 1px;
+	border: 2px solid #A2A2A2;
+	border-radius: 50%;
+}
+/* instal */
+/* avatar */
+aside .avatar{
+	margin-bottom: 10px;	
+}
+aside .bottom-part .my-avatar{
+	overflow: hidden;
+	font-size: 31px;
+	border-radius: 50%;
+	color: white;
+	background-color: #A2A2A2;
+	padding: 0 2px;
+}
+/* avatar */
 @media all and (min-width: 768px){
-/* logo */
+	aside .logo, aside .selection > *, aside .playlist, aside .bottom-part{
+		padding: 0 15px;
+	}
+	aside .lg i{
+		vertical-align: middle;
+	}
+	aside .lg span{
+		vertical-align: middle;
+	}
+	/* logo */
+	aside{
+		align-items: flex-start;
+	}
+	aside .logo{
+		margin: 24px 0;
+	}
+	aside .logo .lg img{
+		width: 80%;
+	}
 
-/* logo */
-/* selection */
+	aside .selection{
+		list-style-type: none;
+		padding: 0;
+	}
+	/* logo */
+	/* selection */
+	aside .selection > *.active{
+		border-left: 3px solid #A7F62D;
+		padding-left: 12px;
+	}
+	/* selection */
+	/* playlist */
+	aside .playlist h3{
+		text-transform: uppercase;
+	}
+	aside .playlist .plus{
+		display: inline-block;
+		font-size: 30px;
+		font-weight: bolder;
+		color: #000;
 
-/* selection */
-/* playlist */
-
-/* playlist */
+		padding: 2px 10px;
+		background-color: #A2A2A2;
+		vertical-align: middle;
+	}
+	aside .playlist span{
+		vertical-align: middle;
+		margin-left: 10px;
+	}
+	aside .playlist .name-playlist{
+		list-style-type: none;
+		padding: 0;
+		overflow-y: auto;
+		/* todo: lo so è una merda ma non trovo un altra soluzione, per questo devo chedere un tiket anche perche ci ho provato a sistemarlo per un ora senza successo */
+		height: calc(100vh - 600px);
+	}
+	/* aside .playlist{
+		flex-grow: 1;
+	}
+	aside .bottom-part{
+		flex-basis: 120px;
+		flex-shrink: 5;
+	} */
+	aside .playlist .name-playlist li{
+		margin: 10px 0;
+	}
+	/* playlist */
+	/* bottom part */
+	aside .bottom-part{
+		width: 100%;
+	}
+	aside .bottom-part span{
+		margin-left: 10px;	
+	}
+	aside .bottom-part hr{
+		width: 100%;
+	}
+	aside .bottom-part .avatar{
+		margin-top: 20px;
+	}
+	/* bottom part */
 }
 
 
@@ -165,19 +272,18 @@ header .my-btn-default{
 	font-weight: bold;
 }
 /* nav */
-/* songs page */
-.songs-page{
+/* SONGS PAGE */
+#songs-page .song-playlist{
 	width: 100%;
 	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 }
-.songs-page div{
+#songs-page div{
 	background-color: rgb(0, 168, 104);
-	width: 200px;
-	height: 237px;
-	margin: 10px;
 }
-/* songs page */
+
+/* SONGS PAGE */
 /* MAIN */
 /* FOOTER */
 /* layout */

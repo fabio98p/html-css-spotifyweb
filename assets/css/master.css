@@ -4,11 +4,45 @@ body{
 	box-sizing: border-box;
 }
 /* UTILITY */
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #888; 
+	border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }
+
+/* scrollbar */
+/* list song */
+
+/* list song */
 /* button */
+
 /* button */
 /* color */
+.color-grey{
+	color: #A2A2A2;
+}
+.color-white{
+	color: #fff
+}
 /* color */
 /* background color */
+
 /* background color */
 /* text position */
 .text-center{
@@ -24,14 +58,7 @@ body{
 
 /* UTILITY */
 /* ASIDE */
-
-/* ASIDE */
-/* MAIN */
-
-/* MAIN */
-/* FOOTER */
-
-/* FOOTER */
+/* layout */
 aside{
 	color: white;
 	float: left;
@@ -40,6 +67,52 @@ aside{
 	width: 50px;
 	overflow-y: auto;
 }
+aside .lg{
+	display: none;
+}
+/* layout */
+
+/* logo */
+aside{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+}
+aside .xs {
+	text-align: center;
+}
+aside .xs i{
+	font-size: 35px;
+}
+aside .selection{
+	list-style-type: none;
+	padding: 0;
+}
+/* logo */
+/* selection */
+
+/* selection */
+/* playlist */
+
+/* playlist */
+@media all and (min-width: 768px){
+/* logo */
+
+/* logo */
+/* selection */
+
+/* selection */
+/* playlist */
+
+/* playlist */
+}
+
+
+/* ASIDE */
+/* MAIN */
+/* layout */
 main{
 	float: left;
 	background-color: #141922;
@@ -47,9 +120,10 @@ main{
 	width: calc(100% - 50px);
 	overflow-y: auto;
 }
+/* layout */
+/* header */
 header{
 	position: fixed;
-	/* background-color: rgba(0, 0, 0, 0.6); */
 	background-color: rgba(0, 0, 0, 0.2);
 	height: 100px;
 	width: calc(100% - 200px);
@@ -64,7 +138,8 @@ header .my-btn-default{
 	border: 2px solid #fff;
 	border-radius: 20px;
 }
-
+/* header */
+/* nav */
 #navbar{
 	margin-top: 100px;
 	height: 50px;
@@ -89,6 +164,8 @@ header .my-btn-default{
 	text-transform: uppercase;
 	font-weight: bold;
 }
+/* nav */
+/* songs page */
 .songs-page{
 	width: 100%;
 	display: flex;
@@ -100,21 +177,35 @@ header .my-btn-default{
 	height: 237px;
 	margin: 10px;
 }
+/* songs page */
+/* MAIN */
+/* FOOTER */
+/* layout */
 footer{
 	float: left;
 	background-color: #282828;
 	height: 100px;
 	width: 100%;
-
 }
 
+/* layout */
 
+
+/* FOOTER */
+
+/* @media query */
 @media all and (min-width: 768px){
 	aside{
 		width: 200px
 	}
 	main{
 		width: calc(100% - 200px);
+	}
+	aside .xs{
+		display: none;
+	}
+	aside .lg{
+		display: block;
 	}
 }
 @media all and (min-width: 992px){
@@ -123,3 +214,9 @@ footer{
 @media all and (min-width: 1200px){
 	
 }
+/* @media query */
+
+
+
+
+

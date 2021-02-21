@@ -273,16 +273,23 @@ header .my-btn-default{
 }
 /* nav */
 /* SONGS PAGE */
-#songs-page .song-playlist{
+
+main #songs-page .song-playlist h1{
+	width: 100%;
+}
+main #songs-page .song-list{
 	width: 100%;
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	justify-content: space-around;
 }
-#songs-page div{
-	background-color: rgb(0, 168, 104);
+main #songs-page .card{
+	flex-shrink: 1;
+	flex-basis: 200px;
+	margin: 0 10px;
 }
-
+main #songs-page img{
+	width: 100%;
+}
 /* SONGS PAGE */
 /* MAIN */
 /* FOOTER */

@@ -215,8 +215,6 @@ aside .bottom-part .my-avatar{
 	}
 	/* bottom part */
 }
-
-
 /* ASIDE */
 /* MAIN */
 /* layout */
@@ -231,6 +229,7 @@ main{
 /* header */
 header{
 	position: fixed;
+	top: 0;
 	background-color: rgba(0, 0, 0, 0.2);
 	height: 100px;
 	width: calc(100% - 200px);
@@ -273,12 +272,16 @@ header .my-btn-default{
 }
 /* nav */
 /* SONGS PAGE */
-main #songs-page .song-playlist h1{
+main #songs-page .title h1{
 	width: 100%;
-	margin-left: 20px;
+	padding-left: 20px;
+	font-weight: bolder;
 }
-main #songs-page .song-playlist p{
+main #songs-page .title p{
 	width: 100%;	
+	padding-left: 20px;
+	font-weight: bold;
+
 }
 main #songs-page .song-list{
 	width: 100%;
@@ -303,7 +306,7 @@ main #songs-page img{
 		width: 100%;
 	}
 	main #songs-page .track-2 .song-list{
-		width: 25%;
+		width: calc(100% * (1/3));
 	}
 	main #songs-page .song-list{
 		flex-wrap: nowrap;
@@ -311,7 +314,10 @@ main #songs-page img{
 	}
 	main #songs-page .card{
 		flex-shrink: 1;
-		flex-basis: 200px;
+		flex-basis: 250px;
+	}
+	main #songs-page .card .text-card{
+		width: 100%;
 	}
 }
 /* SONGS PAGE */

@@ -133,6 +133,9 @@ aside .bottom-part .my-avatar{
 }
 /* avatar */
 @media all and (min-width: 768px){
+	aside{
+		display: block;
+	}
 	aside .logo, aside .selection > *, aside .playlist, aside .bottom-part{
 		padding: 0 15px;
 	}
@@ -143,9 +146,7 @@ aside .bottom-part .my-avatar{
 		vertical-align: middle;
 	}
 	/* logo */
-	aside{
-		align-items: flex-start;
-	}
+
 	aside .logo{
 		margin: 24px 0;
 	}
@@ -182,21 +183,20 @@ aside .bottom-part .my-avatar{
 		vertical-align: middle;
 		margin-left: 10px;
 	}
+	aside .playlist{
+		height: calc(100% - 200px - 160px);
+		min-height: 220px;
+	}
+	aside .playlist .lg{
+		height: 100%;
+	}
 	aside .playlist .name-playlist{
-		list-style-type: none;
 		padding: 0;
 		overflow-y: auto;
-		/* todo: lo so è una merda ma non trovo un altra soluzione, per questo devo chedere un tiket anche perche ci ho provato a sistemarlo per un ora senza successo */
-		height: calc(100vh - 600px);
+		height: calc(100% - 140px);
 	}
-	/* aside .playlist{
-		flex-grow: 1;
-	}
-	aside .bottom-part{
-		flex-basis: 120px;
-		flex-shrink: 5;
-	} */
 	aside .playlist .name-playlist li{
+		list-style-type: none;
 		margin: 10px 0;
 	}
 	/* playlist */
@@ -273,22 +273,46 @@ header .my-btn-default{
 }
 /* nav */
 /* SONGS PAGE */
-
 main #songs-page .song-playlist h1{
 	width: 100%;
+	margin-left: 20px;
+}
+main #songs-page .song-playlist p{
+	width: 100%;	
 }
 main #songs-page .song-list{
 	width: 100%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
+	flex-wrap: wrap;
 }
 main #songs-page .card{
-	flex-shrink: 1;
-	flex-basis: 200px;
-	margin: 0 10px;
+	flex-basis: 50%;
+	padding: 0 20px;
 }
 main #songs-page img{
 	width: 100%;
+}
+@media all and (min-width: 992px){
+	main #songs-page .card{
+		flex-basis: 25%;
+	}
+}
+@media all and (min-width: 1200px){
+	main #songs-page .track-6 .song-list{
+		width: 100%;
+	}
+	main #songs-page .track-2 .song-list{
+		width: 25%;
+	}
+	main #songs-page .song-list{
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+	main #songs-page .card{
+		flex-shrink: 1;
+		flex-basis: 200px;
+	}
 }
 /* SONGS PAGE */
 /* MAIN */
@@ -328,8 +352,3 @@ footer{
 	
 }
 /* @media query */
-
-
-
-
-

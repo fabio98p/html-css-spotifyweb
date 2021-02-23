@@ -286,11 +286,16 @@ header .my-btn-default{
 	list-style-type: none;
 }
 #navbar li{
-	padding: 16px 10px;
+	margin: 16px 10px 0 10px;
 	color: salmon;
 	display: block;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+#navbar li:hover, #navbar li.active{
+	border-bottom: 2px solid #A7F62D;
+	border-width: 50%;
+	margin: 14px 10px 0 10px;
 }
 /* nav */
 /* SONGS PAGE */
@@ -350,12 +355,73 @@ main #songs-page img{
 /* SONGS PAGE */
 /* MAIN */
 /* FOOTER */
-/* layout */
+footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/* choice-track */
+.choice-track > *{
+	display: inline-block;
+}
+.choice-track img{
+	width: 50px;
+	vertical-align: middle;
+	margin: 0 10px;
+}
+.choice-track .track{
+	vertical-align: middle;
+	margin-right: 30px;
+}
+.choice-track .track h4, .choice-track .track p{
+	margin: 0;
+	text-align: left;
+}
+.choice-track .icons{
+	vertical-align: middle;
+}
+.choice-track .icons i{
+	display: block;
+	margin-left: 15px;
+}
+@media all and (min-width: 992px){
+	.choice-track .icons i{
+		display: inline-block;
+	}
+}
+/* choice-track */
+/* player */
+.player{
+	flex-grow: 1;
+}
+.player .player-icons i{
+	margin: 0 15px;
+}
+.player .player-icons i.circle{
+	border: 3px solid white;
+	border-radius: 50%;
+	padding: 5px 4px 5px 6px;
+}
+.player .player-icons i.grow{
+	font-size: 20px;
+}
+
+.player .progress-bar{
+	width: 100%;
+}
+/* todo: per personalizzare la progressbar usa questo https://stackoverflow.com/questions/30865555/customize-the-handler-of-input-range */
+.player .progress-bar input{
+	background-color: #fff;
+	width:40%;
+}
 
 
-/* layout */
-
-
+/* player */
+/* volume */
+.volume > * {
+	margin-right: 15px;
+}
+/* volume */
 /* FOOTER */
 
 /* @media query */

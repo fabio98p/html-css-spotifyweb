@@ -262,6 +262,10 @@ header .my-btn-default{
 	border: 2px solid #fff;
 	border-radius: 20px;
 }
+header .my-btn-default:hover{
+	padding: 12px;
+	margin-right: 16px;
+}
 @media all and (min-width: 768px){
 	header{
 		width: calc(100% - 200px);
@@ -320,8 +324,38 @@ main #songs-page .card{
 	flex-basis: 50%;
 	padding: 0 20px;
 }
+#songs-page .responsive{
+	font-size: 0;
+	position: relative;
+}
 main #songs-page img{
 	width: 100%;
+}
+#songs-page .card-hover{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+#songs-page .card-hover i{
+	font-size: 50px;
+	color: #fff;
+}
+#songs-page .card-hover i.circle{
+	border: 6px solid white;
+	border-radius: 50%;
+	padding: 10px 5px 10px 15px;
+}
+#songs-page .responsive:hover .card-hover{
+	display: flex;
 }
 @media all and (min-width: 992px){
 	main #songs-page .card{

@@ -67,8 +67,8 @@ width: 8px;
 /* text position */
 
 /* UTILITY */
-/* ASIDE */
-/* layout */
+/* LAYOUT */
+/* aside */
 aside{
 	float: left;
 	color: white;
@@ -88,7 +88,28 @@ aside .xs {
 aside .lg{
 	display: none;
 }
-/* layout */
+/* aside */
+/* main */
+main{
+	float: left;
+	background-color: #141922;
+	height: calc(100vh - 100px);
+	width: calc(100% - 50px);
+	overflow-y: auto;
+}
+/* main */
+/* footer */
+footer{
+	float: left;
+	background-color: #282828;
+	height: 100px;
+	width: 100%;
+}
+/* footer */
+
+
+/* LAYOUT */
+/* ASIDE */
 /* top part */
 aside .top-part i{
 	font-size: 35px;
@@ -217,22 +238,18 @@ aside .bottom-part .my-avatar{
 }
 /* ASIDE */
 /* MAIN */
-/* layout */
-main{
-	float: left;
-	background-color: #141922;
-	height: calc(100vh - 100px);
-	width: calc(100% - 50px);
-	overflow-y: auto;
-}
-/* layout */
+
 /* header */
 header{
 	position: fixed;
 	top: 0;
 	background-color: rgba(0, 0, 0, 0.2);
 	height: 100px;
-	width: calc(100% - 200px);
+	width: calc(100% - 50px);
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 header .my-btn-default{
 	background-color: transparent;
@@ -241,14 +258,19 @@ header .my-btn-default{
 	font-size: 20px;
 	text-transform: uppercase;
 	padding: 10px;
+	margin-right: 20px;
 	border: 2px solid #fff;
 	border-radius: 20px;
+}
+@media all and (min-width: 768px){
+	header{
+		width: calc(100% - 200px);
+	}
 }
 /* header */
 /* nav */
 #navbar{
 	margin-top: 100px;
-	height: 50px;
 	width: 100%;
 }
 #navbar ul{
@@ -264,7 +286,7 @@ header .my-btn-default{
 	list-style-type: none;
 }
 #navbar li{
-	padding: 4px;
+	padding: 16px 10px;
 	color: salmon;
 	display: block;
 	text-transform: uppercase;
@@ -313,10 +335,15 @@ main #songs-page img{
 		justify-content: space-between;
 	}
 	main #songs-page .card{
+		display: block;
 		flex-shrink: 1;
 		flex-basis: 250px;
+		max-width: 250px;
 	}
 	main #songs-page .card .text-card{
+		width: 100%;
+	}
+	main #songs-page .card .text-card h3, main #songs-page .card .text-card p{
 		width: 100%;
 	}
 }
@@ -324,12 +351,7 @@ main #songs-page img{
 /* MAIN */
 /* FOOTER */
 /* layout */
-footer{
-	float: left;
-	background-color: #282828;
-	height: 100px;
-	width: 100%;
-}
+
 
 /* layout */
 

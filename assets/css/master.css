@@ -497,6 +497,7 @@ footer{
 	margin: 0 10px;
 }
 .choice-track .track{
+	display: none;
 	vertical-align: middle;
 	margin-right: 30px;
 }
@@ -509,11 +510,19 @@ footer{
 }
 .choice-track .icons i{
 	display: block;
-	margin-left: 15px;
 	color: #a2a2a2;
+	margin-left: 0;
 }
 .choice-track .icons i:hover{
 	color: #fff;
+}
+@media all and (min-width: 700px){
+	.choice-track .track{
+		display: inline-block;
+	}
+	.choice-track .icons i {
+		margin-left: 15px;
+	}
 }
 @media all and (min-width: 992px){
 	.choice-track .icons i{
@@ -551,6 +560,21 @@ footer{
 /*#region VOLUME */
 .volume > * {
 	margin-right: 15px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	display: block;
+	vertical-align: middle;
+}
+.volume i.fa-volume-up, .volume input{
+	display: none;
+}
+@media all and (min-width: 700px){
+	.volume > * {
+		display: inline-block;
+	}
+	.volume i.fa-volume-up, .volume input{
+		display: inline-block;
+	}
 }
 /*#endregion */
 /*#endregion */
